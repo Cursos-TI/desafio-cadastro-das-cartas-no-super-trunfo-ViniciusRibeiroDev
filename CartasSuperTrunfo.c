@@ -150,6 +150,8 @@ int main() {
         printf("5: Pontos Turísticos.\n");
         printf("6: Densidade Populacional.\n");
 
+        scanf("%i", &atributo);
+
         switch (atributo)
         {
         case 2:
@@ -160,31 +162,31 @@ int main() {
             
             break;
         case 3:
-            printf("Área da carta 1: %f, Área da carta 2: %f\n", area1, area2);
+            printf("Área da carta 1: %.02f, Área da carta 2: %.02f\n", area1, area2);
 
-            printf("População da carta 1: %lu, População da carta 2: %lu\n", populacao1, populacao2);
-            printf("Carta %i venceu\n", ((populacao1 + area1) > (populacao2 + area2)) == 1 ? 1 : 2);
+            printf("Estado da carta 1: %s, Estado da carta 2: %s\n", estado1, estado2);
+            printf("Carta %i venceu\n", (area1 > area2) == 1 ? 1 : 2);
 
             break;
         case 4:
-            printf("PIB da carta 1: %f, PIB da carta 2: %f\n", pib1, pib2);
+            printf("PIB da carta 1: %.02f, PIB da carta 2: %.02f\n", pib1, pib2);
 
-            printf("População da carta 1: %lu, População da carta 2: %lu\n", populacao1, populacao2);
-            printf("Carta %i venceu\n", ((populacao1 + pib1) > (populacao2 + pib2)) == 1 ? 1 : 2);
+            printf("Estado da carta 1: %s, Estado da carta 2: %s\n", estado1, estado2);
+            printf("Carta %i venceu\n", (pib1 > pib2) == 1 ? 1 : 2);
 
             break;
         case 5:
-            printf("Pontos Turísticos da carta 1: %i, Pontos Turísticos da carta 2: %i\n", pontos_turisticos2, pontos_turisticos2);
-            printf("Pontos Turísticos: Carta %i venceu\n", (pontos_turisticos2 > pontos_turisticos2) == 1 ? 1 : 2);
+            printf("Pontos Turísticos da carta 1: %i, Pontos Turísticos da carta 2: %i\n", pontos_turisticos1, pontos_turisticos2);
+            printf("Estado da carta 1: %s, Estado da carta 2: %s\n", estado1, estado2);
 
-            printf("Carta %i venceu\n", ((populacao1 + pontos_turisticos1) > (populacao2 + pontos_turisticos2)) == 1 ? 1 : 2);
+            printf("Carta %i venceu\n", (pontos_turisticos1 > pontos_turisticos2) == 1 ? 1 : 2);
 
             break;
         case 6:
-            printf("Densidade Populacional 1: %f, Densidade Populacional 2: %f\n", densidade_populacional1, densidade_populacional2);
+            printf("Densidade Populacional 1: %.02f, Densidade Populacional 2: %.02f\n", densidade_populacional1, densidade_populacional2);
 
-            printf("População da carta 1: %lu, População da carta 2: %lu\n", populacao1, populacao2);
-            printf("Carta %i venceu\n", ((populacao1 + densidade_populacional1) > (populacao2 + densidade_populacional2)) == 1 ? 1 : 2);
+            printf("Estado da carta 1: %s, Estado da carta 2: %s\n", estado1, estado2);
+            printf("Carta %i venceu\n", (densidade_populacional1 > densidade_populacional2) == 1 ? 1 : 2);
 
             break;
         
@@ -203,24 +205,26 @@ int main() {
         printf("5: Pontos Turísticos.\n");
         printf("6: Densidade Populacional.\n");
 
+        scanf("%i", &atributo);
+
         switch (atributo)
         {
         case 1:
             printf("Estado da carta 1: %s, Estado da carta 2: %s\n", estado1, estado2);
 
             printf("População da carta 1: %lu, População da carta 2: %lu\n", populacao1, populacao2);
-            printf("População: Carta %i venceu\n", (area1 > populacao2) == 1 ? 1 : 2);
+            printf("População: Carta %i venceu\n", (populacao1 > populacao2) == 1 ? 1 : 2);
             
             break;
         case 3:
-            printf("Área da carta 1: %f, Área da carta 2: %f\n", area1, area2);
+            printf("Área da carta 1: %.02f, Área da carta 2: %.02f\n", area1, area2);
 
             printf("População da carta 1: %lu, População da carta 2: %lu\n", populacao1, populacao2);
             printf("Carta %i venceu\n", ((populacao1 + area1) > (populacao2 + area2)) == 1 ? 1 : 2);
 
             break;
         case 4:
-            printf("PIB da carta 1: %f, PIB da carta 2: %f\n", pib1, pib2);
+            printf("PIB da carta 1: %.02f, PIB da carta 2: %.02f\n", pib1, pib2);
 
             printf("População da carta 1: %lu, População da carta 2: %lu\n", populacao1, populacao2);
             printf("Carta %i venceu\n", ((populacao1 + pib1) > (populacao2 + pib2)) == 1 ? 1 : 2);
@@ -234,7 +238,7 @@ int main() {
 
             break;
         case 6:
-            printf("Densidade Populacional 1: %f, Densidade Populacional 2: %f\n", densidade_populacional1, densidade_populacional2);
+            printf("Densidade Populacional 1: %.02f, Densidade Populacional 2: %.02f\n", densidade_populacional1, densidade_populacional2);
 
             printf("População da carta 1: %lu, População da carta 2: %lu\n", populacao1, populacao2);
             printf("Carta %i venceu\n", ((populacao1 + densidade_populacional1) > (populacao2 + densidade_populacional2)) == 1 ? 1 : 2);
@@ -256,39 +260,41 @@ int main() {
         printf("5: Pontos Turísticos.\n");
         printf("6: Densidade Populacional.\n");
 
+        scanf("%i", &atributo);
+
         switch (atributo)
         {
         case 1:
             printf("Estado da carta 1: %s, Estado da carta 2: %s\n", estado1, estado2);
 
-            printf("Área da carta 1: %f, Área da carta 2: %f\n", area1, area2);
+            printf("Área da carta 1: %.02f, Área da carta 2: %.02f\n", area1, area2);
             printf("Carta %i venceu\n", (area1 > area2) == 1 ? 1 : 2);
             
             break;
         case 2:
-            printf("Área da carta 1: %f, Área da carta 2: %f\n", area1, area2);
+            printf("Área da carta 1: %.02f, Área da carta 2: %.02f\n", area1, area2);
 
             printf("População da carta 1: %lu, População da carta 2: %lu\n", populacao1, populacao2);
             printf("Carta %i venceu\n", ((area1 + populacao1) > (populacao2 + area2)) == 1 ? 1 : 2); 
             break;
         case 4:
-            printf("PIB da carta 1: %f, PIB da carta 2: %f\n", pib1, pib2);
+            printf("PIB da carta 1: %.02f, PIB da carta 2: %.02f\n", pib1, pib2);
 
-            printf("Área da carta 1: %lu, Área da carta 2: %lu\n", area1, area2);
+            printf("Área da carta 1: %.02f, Área da carta 2: %.02f\n", area1, area2);
             printf("Carta %i venceu\n", ((area1 + pib1) > (area2 + pib2)) == 1 ? 1 : 2);
 
             break;
         case 5:
             printf("Pontos Turísticos da carta 1: %i, Pontos Turísticos da carta 2: %i\n", pontos_turisticos2, pontos_turisticos2);
 
-            printf("Área da carta 1: %lu, Área da carta 2: %lu\n", area1, area2);
+            printf("Área da carta 1: %.02f, Área da carta 2: %.02f\n", area1, area2);
             printf("Carta %i venceu\n", ((area1 + pontos_turisticos1) > (area2 + pontos_turisticos2)) == 1 ? 1 : 2);
 
             break;
         case 6:
-            printf("Densidade Populacional 1: %f, Densidade Populacional 2: %f\n", densidade_populacional1, densidade_populacional2);
+            printf("Densidade Populacional 1: %.02f, Densidade Populacional 2: %.02f\n", densidade_populacional1, densidade_populacional2);
 
-            printf("Área da carta 1: %lu, Área da carta 2: %lu\n", area1, area2);
+            printf("Área da carta 1: %.02f, Área da carta 2: %.02f\n", area1, area2);
             printf("Carta %i venceu\n", ((area1 + densidade_populacional1) > (area2 + densidade_populacional2)) == 1 ? 1 : 2);
 
             break;
@@ -301,9 +307,6 @@ int main() {
 
         break;
     case 4:
-        printf("PIB da carta 1: %f, PIB da carta 2: %f\n", pib1, pib2);
-        printf("PIB: Carta %i venceu\n", (pib1 > pib2) == 1 ? 1 : 2);
-
         printf("Escolha o segundo atributo.\n");
         printf("1: Estado\n");
         printf("2: Área.\n");
@@ -311,23 +314,25 @@ int main() {
         printf("5: Pontos Turísticos.\n");
         printf("6: Densidade Populacional.\n");
 
+        scanf("%i", &atributo);
+
         switch (atributo)
         {
         case 1:
             printf("Estado da carta 1: %s, Estado da carta 2: %s\n", estado1, estado2);
 
-            printf("PIB da carta 1: %lu, PIB da carta 2: %lu\n", pib1, pib2);
+            printf("PIB da carta 1: %.02f, PIB da carta 2: %.02f\n", pib1, pib2);
             printf("Carta %i venceu\n", (pib1 > pib2) == 1 ? 1 : 2);
             
             break;
         case 2:
-            printf("PIB da carta 1: %f, PIB da carta 2: %f\n", pib1, pib2);
+            printf("PIB da carta 1: %.02f, PIB da carta 2: %.02f\n", pib1, pib2);
 
-            printf("Área da carta 1: %lu, Área da carta 2: %lu\n", area1, area2);
+            printf("Área da carta 1: %.02f, Área da carta 2: %.02f\n", area1, area2);
             printf("Carta %i venceu\n", ((pib1 + area1) > (area2 + pib2)) == 1 ? 1 : 2); 
             break;
         case 3:
-            printf("PIB da carta 1: %f, PIB da carta 2: %f\n", pib1, pib2);
+            printf("PIB da carta 1: %.02f, PIB da carta 2: %.02f\n", pib1, pib2);
 
             printf("População da carta 1: %lu, População da carta 2: %lu\n", populacao1, populacao2);
             printf("Carta %i venceu\n", ((pib1 + populacao1) > (pib2 + populacao2)) == 1 ? 1 : 2);
@@ -336,14 +341,14 @@ int main() {
         case 5:
             printf("Pontos Turísticos da carta 1: %i, Pontos Turísticos da carta 2: %i\n", pontos_turisticos2, pontos_turisticos2);
 
-            printf("PIB da carta 1: %lu, PIB da carta 2: %lu\n", pib1, pib2);
+            printf("PIB da carta 1: %.02f, PIB da carta 2: %.02f\n", pib1, pib2);
             printf("Carta %i venceu\n", ((pib1 + pontos_turisticos1) > (pib2 + pontos_turisticos2)) == 1 ? 1 : 2);
 
             break;
         case 6:
-            printf("Densidade Populacional 1: %f, Densidade Populacional 2: %f\n", densidade_populacional1, densidade_populacional2);
+            printf("Densidade Populacional 1: %.02f, Densidade Populacional 2: %.02f\n", densidade_populacional1, densidade_populacional2);
 
-            printf("PIB da carta 1: %lu, PIB da carta 2: %lu\n", pib1, pib2);
+            printf("PIB da carta 1: %.02f, PIB da carta 2: %.02f\n", pib1, pib2);
             printf("Carta %i venceu\n", ((pib1 + densidade_populacional1) > (pib2 + densidade_populacional2)) == 1 ? 1 : 2);
 
             break;
@@ -363,6 +368,8 @@ int main() {
         printf("4: PIB.\n");
         printf("6: Densidade Populacional.\n");
 
+        scanf("%i", &atributo);
+
         switch (atributo)
         {
         case 1:
@@ -375,7 +382,7 @@ int main() {
         case 2:
             printf("Pontos Turisticos da carta 1: %i, Pontos Turisticos da carta 2: %i\n", pontos_turisticos1, pontos_turisticos2);
 
-            printf("Área da carta 1: %i, Área da carta 2: %i\n", area1, area2);
+            printf("Área da carta 1: %.02f, Área da carta 2: %.02f\n", area1, area2);
             printf("Carta %i venceu\n", ((pontos_turisticos1 + area1) > (area2 + pontos_turisticos2)) == 1 ? 1 : 2); 
             break;
         case 3:
@@ -389,12 +396,12 @@ int main() {
         case 4:
             printf("Pontos Turisticos da carta 1: %i, Pontos Turisticos da carta 2: %i\n", pontos_turisticos1, pontos_turisticos2);
 
-            printf("PIB da carta 1: %f, PIB da carta 2: %f\n", pib1, pib2);
+            printf("PIB da carta 1: %.02f, PIB da carta 2: %.02f\n", pib1, pib2);
             printf("Carta %i venceu\n", ((pontos_turisticos1 + pib1) > (pontos_turisticos2 + pib2)) == 1 ? 1 : 2);
 
         break;
         case 6:
-            printf("Densidade Populacional 1: %f, Densidade Populacional 2: %f\n", densidade_populacional1, densidade_populacional2);
+            printf("Densidade Populacional 1: %.02f, Densidade Populacional 2: %.02f\n", densidade_populacional1, densidade_populacional2);
 
             printf("Pontos Turisticos da carta 1: %i, Pontos Turisticos da carta 2: %i\n", pontos_turisticos1, pontos_turisticos2);
             printf("Carta %i venceu\n", ((pontos_turisticos1 + densidade_populacional1) > (pontos_turisticos2 + densidade_populacional2)) == 1 ? 1 : 2);
@@ -408,9 +415,6 @@ int main() {
         }
         break;
     case 6:
-        printf("Densidade Populacional 1: %f, Densidade Populacional 2: %f\n", densidade_populacional1, densidade_populacional2);
-        printf("Área: Carta %i venceu\n", (densidade_populacional1 < densidade_populacional2) == 1 ? 1 : 2);
-
         printf("Escolha o segundo atributo.\n");
         printf("1: Estado\n");
         printf("2: Área.\n");
@@ -419,23 +423,25 @@ int main() {
         printf("5: Pontos Turisticos.\n");
         printf("6: Densidade Populacional.\n");
 
+        scanf("%i", &atributo);
+
         switch (atributo)
         {
         case 1:
             printf("Estado da carta 1: %s, Estado da carta 2: %s\n", estado1, estado2);
 
-            printf("Densidade Populacional da carta 1: %f, Densidade Populacional da carta 2: %f\n", densidade_populacional1, densidade_populacional2);
+            printf("Densidade Populacional da carta 1: %.02f, Densidade Populacional da carta 2: %.02f\n", densidade_populacional1, densidade_populacional2);
             printf("Carta %i venceu\n", (densidade_populacional1 > densidade_populacional2) == 1 ? 1 : 2);
             
             break;
         case 2:
-            printf("Densidade Populacional da carta 1: %f, Densidade Populacional da carta 2: %f\n", densidade_populacional1, densidade_populacional2);
+            printf("Densidade Populacional da carta 1: %.02f, Densidade Populacional da carta 2: %.02f\n", densidade_populacional1, densidade_populacional2);
 
-            printf("Área da carta 1: %f, Área da carta 2: %f\n", area1, area2);
+            printf("Área da carta 1: %.02f, Área da carta 2: %.02f\n", area1, area2);
             printf("Carta %i venceu\n", ((densidade_populacional1 + area1) > (area2 + densidade_populacional2)) == 1 ? 1 : 2); 
             break;
         case 3:
-            printf("Densidade Populacional da carta 1: %f, Densidade Populacional da carta 2: %f\n", densidade_populacional1, densidade_populacional2);
+            printf("Densidade Populacional da carta 1: %.02f, Densidade Populacional da carta 2: %.02f\n", densidade_populacional1, densidade_populacional2);
 
             printf("População da carta 1: %lu, População da carta 2: %lu\n", populacao1, populacao2);
             printf("Carta %i venceu\n", ((densidade_populacional1 + populacao1) > (densidade_populacional2 + populacao2)) == 1 ? 1 : 2);
@@ -443,14 +449,14 @@ int main() {
             break;
 
         case 4:
-            printf("Densidade Populacional da carta 1: %f, Densidade Populacional da carta 2: %f\n", densidade_populacional1, densidade_populacional2);
+            printf("Densidade Populacional da carta 1: %.02f, Densidade Populacional da carta 2: %.02f\n", densidade_populacional1, densidade_populacional2);
 
-            printf("PIB da carta 1: %f, PIB da carta 2: %f\n", pib1, pib2);
+            printf("PIB da carta 1: %.02f, PIB da carta 2: %.02f\n", pib1, pib2);
             printf("Carta %i venceu\n", ((densidade_populacional1 + pib1) > (densidade_populacional2 + pib2)) == 1 ? 1 : 2);
 
         break;
         case 5:
-            printf("Densidade Populacional 1: %f, Densidade Populacional 2: %f\n", densidade_populacional1, densidade_populacional2);
+            printf("Densidade Populacional 1: %.02f, Densidade Populacional 2: %.02f\n", densidade_populacional1, densidade_populacional2);
 
             printf("Pontos Turisticos Populacional da carta 1: %i, Pontos Turisticos da carta 2: %i\n", pontos_turisticos1, pontos_turisticos2);
             printf("Carta %i venceu\n", ((pontos_turisticos1 + densidade_populacional1) > (pontos_turisticos2 + densidade_populacional2)) == 1 ? 1 : 2);
